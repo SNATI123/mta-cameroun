@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suivi de Colis - MTA CAMEROUN Transport & Logistique</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">
+                <img src="../images/logo.png" alt="Logo" class="logo-img">
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="../index.html">Accueil</a></li>
+            <li><a href="services.html">Nos services</a></li>
+            <!-- <li><a href="pages/tracking.html">Suivi Colis</a></li> -->
+            <li><a href="about.html">À propos</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Tracking Header -->
+    <header class="page-header">
+        <h1>Suivi de votre Colis</h1>
+        <p>Suivez vos expéditions en temps réel</p>
+    </header>
+
+    <!-- Tracking System -->
+    <section class="tracking-system">
+        <div class="tracking-container">
+            <div class="tracking-form-container">
+                <h2>Entrez votre numéro de suivi</h2>
+                <form class="tracking-form" id="tracking-form">
+                    <input type="text" placeholder="Ex: MTA CAMEROUN123456789" required>
+                    <button type="submit">Suivre mon colis</button>
+                </form>
+            </div>
+
+            <div class="tracking-result" id="tracking-result" style="display: none;">
+                <h3>Statut de votre colis</h3>
+                <div class="tracking-timeline">
+                    <div class="timeline-item active">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h4>Colis enregistré</h4>
+                            <p>Votre colis a été enregistré dans notre système</p>
+                            <span class="time">Date</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h4>En transit</h4>
+                            <p>Votre colis est en cours d'acheminement</p>
+                            <span class="time">Date</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h4>En cours de livraison</h4>
+                            <p>Votre colis est en cours de livraison</p>
+                            <span class="time">Date</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h4>Livré</h4>
+                            <p>Votre colis a été livré</p>
+                            <span class="time">Date</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tracking-info">
+            <h3>Comment suivre votre colis ?</h3>
+            <div class="info-grid">
+                <div class="info-item">
+                    <h4>1. Obtenez votre numéro</h4>
+                    <p>Vous recevez un numéro de suivi unique lors de l'expédition</p>
+                </div>
+                <div class="info-item">
+                    <h4>2. Entrez le numéro</h4>
+                    <p>Saisissez votre numéro dans le formulaire ci-dessus</p>
+                </div>
+                <div class="info-item">
+                    <h4>3. Suivez en temps réel</h4>
+                    <p>Visualisez l'état et la position de votre colis</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>MTA CAMEROUN</h3>
+                <p>Votre partenaire logistique de confiance au Cameroun.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: contact@mtacolis.com</p>
+                <p>Tél: +237 XXX XXX XXX</p>
+            </div>
+            <div class="footer-section">
+                <h3>Liens Rapides</h3>
+                <ul>
+                    <li><a href="../index.html">Accueil</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 MTA CAMEROUN. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
