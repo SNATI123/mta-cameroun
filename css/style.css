@@ -1151,6 +1151,7 @@ img::before {
 }
 
 .location-card:hover::before {
+    background: red;
     transform: scaleX(1);
 }
 
