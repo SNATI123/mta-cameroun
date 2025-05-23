@@ -390,6 +390,24 @@ document.addEventListener('DOMContentLoaded', function() {
     animateImagesOnScroll();
 });
 
+// Slider functionality
+document.addEventListener('DOMContentLoaded', () => {
+    const slides = document.querySelectorAll('.slide');
+    let currentSlide = 0;
+
+    function changeSlide() {
+        slides[currentSlide].classList.remove('active');
+        currentSlide = (currentSlide + 1) % slides.length;
+        slides[currentSlide].classList.add('active');
+    }
+
+    // Initialize first slide
+    slides[currentSlide].classList.add('active');
+
+    // Change slide every 3 seconds
+    setInterval(changeSlide, 3000);
+});
+
 // Ajout des styles CSS pour les animations
 const style = document.createElement('style');
 style.textContent = `
@@ -426,3 +444,186 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
+
+// Gestion des formulaires de réservation
+document.addEventListener('DOMContentLoaded', () => {
+    // Formulaire de restauration
+    const restoForm = document.querySelector('.contact-form');
+    if (restoForm) {
+        restoForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const formData = new FormData(restoForm);
+            const data = Object.fromEntries(formData);
+            
+            // Afficher un message de confirmation
+            const confirmation = document.createElement('div');
+            confirmation.className = 'confirmation-message';
+            confirmation.innerHTML = `
+                <h3>Merci pour votre réservation !</h3>
+                <p>Nous vous recontacterons prochainement pour confirmer votre réservation.</p>
+            `;
+            
+            restoForm.parentNode.insertBefore(confirmation, restoForm);
+            
+            // Réinitialiser le formulaire
+            restoForm.reset();
+            
+            // Supprimer le message après 5 secondes
+            setTimeout(() => {
+                confirmation.remove();
+            }, 5000);
+        });
+    }
+
+    // Formulaire de tourisme
+    const tourismForm = document.querySelector('#contact-tourisme .contact-form');
+    if (tourismForm) {
+        tourismForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const formData = new FormData(tourismForm);
+            const data = Object.fromEntries(formData);
+            
+            // Afficher un message de confirmation
+            const confirmation = document.createElement('div');
+            confirmation.className = 'confirmation-message';
+            confirmation.innerHTML = `
+                <h3>Merci pour votre réservation !</h3>
+                <p>Nous vous recontacterons prochainement pour confirmer votre circuit touristique.</p>
+            `;
+            
+            tourismForm.parentNode.insertBefore(confirmation, tourismForm);
+            
+            // Réinitialiser le formulaire
+            tourismForm.reset();
+            
+            // Supprimer le message après 5 secondes
+            setTimeout(() => {
+                confirmation.remove();
+            }, 5000);
+        });
+    }
+});
+
+// Ajout des styles CSS pour les messages de confirmation
+const styleConfirmation = document.createElement('style');
+styleConfirmation.textContent = `
+.confirmation-message {
+    background: var(--primary-color);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.confirmation-message h3 {
+    margin: 0 0 1rem 0;
+    color: white;
+}
+
+.confirmation-message p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.9);
+}
+`;
+document.head.appendChild(styleConfirmation);
+
+// Gestion des flèches de navigation pour le menu
+document.addEventListener('DOMContentLoaded', () => {
+    const menuGrid = document.getElementById('menuGrid');
+    const navLeft = document.querySelector('.menu-nav-left');
+    const navRight = document.querySelector('.menu-nav-right');
+    const scrollAmount = 300; // Distance de défilement en pixels
+
+    // Fonction pour dérouler horizontalement
+    function scrollHorizontally(direction) {
+        const container = menuGrid;
+        const currentScroll = container.scrollLeft;
+        const containerWidth = container.offsetWidth;
+        const scrollWidth = container.scrollWidth;
+        
+        // Calculer la nouvelle position de défilement
+        let newScroll = currentScroll;
+        if (direction === 'left') {
+            newScroll = Math.max(0, currentScroll - scrollAmount);
+        } else {
+            newScroll = Math.min(scrollWidth - containerWidth, currentScroll + scrollAmount);
+        }
+        
+        // Faire le défilement avec animation
+        container.scrollTo({
+            left: newScroll,
+            behavior: 'smooth'
+        });
+    }
+
+    // Ajouter les écouteurs d'événements
+    navLeft.addEventListener('click', () => scrollHorizontally('left'));
+    navRight.addEventListener('click', () => scrollHorizontally('right'));
+
+    // Masquer les flèches quand elles ne sont pas nécessaires
+    function updateNavVisibility() {
+        const container = menuGrid;
+        const currentScroll = container.scrollLeft;
+        const containerWidth = container.offsetWidth;
+        const scrollWidth = container.scrollWidth;
+
+        navLeft.style.display = currentScroll === 0 ? 'none' : 'block';
+        navRight.style.display = (scrollWidth - containerWidth - currentScroll) <= 0 ? 'none' : 'block';
+    }
+
+    // Mettre à jour la visibilité des flèches au chargement et au défilement
+    updateNavVisibility();
+    menuGrid.addEventListener('scroll', updateNavVisibility);
+});
+
+// Navigation des menus
+function setupMenuNavigation() {
+    const menuGrid = document.querySelector('.menu-grid');
+    const prevButton = document.querySelector('.menu-nav-prev');
+    const nextButton = document.querySelector('.menu-nav-next');
+
+    if (!menuGrid || !prevButton || !nextButton) return;
+
+    let isScrolling = false;
+
+    // Désactiver les boutons si nécessaire
+    function updateButtonStates() {
+        const scrollLeft = menuGrid.scrollLeft;
+        const scrollWidth = menuGrid.scrollWidth;
+        const clientWidth = menuGrid.clientWidth;
+
+        prevButton.disabled = scrollLeft <= 0;
+        nextButton.disabled = scrollLeft >= (scrollWidth - clientWidth);
+    }
+
+    // Gestion du défilement
+    menuGrid.addEventListener('scroll', () => {
+        if (!isScrolling) {
+            updateButtonStates();
+        }
+    });
+
+    // Bouton précédent
+    prevButton.addEventListener('click', () => {
+        menuGrid.scrollBy({
+            left: -300,
+            behavior: 'smooth'
+        });
+    });
+
+    // Bouton suivant
+    nextButton.addEventListener('click', () => {
+        menuGrid.scrollBy({
+            left: 300,
+            behavior: 'smooth'
+        });
+    });
+
+    // Mise à jour initiale des boutons
+    updateButtonStates();
+}
+
+document.addEventListener('DOMContentLoaded', setupMenuNavigation);

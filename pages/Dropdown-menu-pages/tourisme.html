@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourisme - MTA CAMEROUN</title>
+    <meta name="description" content="Découvrez le Cameroun avec MTA CAMEROUN. Des plages paradisiaques aux montagnes majestueuses, une expérience touristique unique.">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="../../index.html">
+                <img src="../../images/logo.png" alt="Logo" class="logo-img">
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="../../index.html">Accueil</a></li>
+            <li class="services-dropdown">
+                <a href="">Nos services <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="../Dropdown-menu-pages/transport.html">Transport/Logistique</a></li>
+                    <li><a href="../Dropdown-menu-pages/Restauration.html">Restauration</a></li>
+                    <li><a href="../Dropdown-menu-pages/tourisme.html">Tourisme</a></li>
+                </ul>
+            </li>
+            <li><a href="../../pages/about.html">À propos</a></li>
+            <li><a href="../../pages/contact.html">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" data-background="../../images/tourisme.jpg">
+        <div class="hero-content">
+            <h1>Découvrez le Cameroun</h1>
+            <p>Des plages paradisiaques aux montagnes majestueuses, une expérience touristique unique</p>
+        </div>
+    </header>
+
+    <!-- Section Destinations -->
+    <section class="destinations" id="destinations">
+        <div class="container">
+            <h2>Nos Destinations</h2>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <img src="../../images/tourisme1.jpg" alt="Plage de Kribi">
+                    <h3>Kribi</h3>
+                    <p>La perle du Cameroun. Plages de sable blanc, forêt de Campo et faune unique.</p>
+                </div>
+
+                <div class="service-card">
+                    <img src="../../images/tourisme2.jpg" alt="Mont Cameroun">
+                    <h3>Mont Cameroun</h3>
+                    <p>L'unique volcan actif d'Afrique de l'Ouest. Randonnées et paysages spectaculaires.</p>
+                </div>
+
+                <div class="service-card">
+                    <img src="../../images/tourisme3.jpg" alt="Parc Waza">
+                    <h3>Parc National de Waza</h3>
+                    <p>Safari inoubliable au cœur de la savane camerounaise. Faune et flore exceptionnelles.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Circuits -->
+    <section class="circuits" id="circuits">
+        <div class="container">
+            <h2>Nos Circuits</h2>
+            <div class="menu-grid">
+                <div class="menu-card">
+                    <img src="../../images/circuit1.jpg" alt="Circuit Nord">
+                    <div class="menu-content">
+                        <h3>Circuit Nord</h3>
+                        <p>Durée : 7 jours</p>
+                        <p>Destination : Parc de Waza, Parc de Benoué</p>
+                        <p>Activités : Safari, Observation de la faune</p>
+                        <span class="price">250 000 FCFA</span>
+                    </div>
+                </div>
+
+                <div class="menu-card">
+                    <img src="../../images/circuit2.jpg" alt="Circuit Sud">
+                    <div class="menu-content">
+                        <h3>Circuit Sud</h3>
+                        <p>Durée : 5 jours</p>
+                        <p>Destination : Kribi, Campo</p>
+                        <p>Activités : Plongée, Safari marin</p>
+                        <span class="price">180 000 FCFA</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Contact -->
+    <section class="contact" id="contact-tourisme">
+        <div class="container">
+            <h2>Réservez votre Circuit</h2>
+            <div class="contact-form">
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Votre nom" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Votre email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" name="phone" placeholder="Votre téléphone" required>
+                    </div>
+                    <div class="form-group">
+                        <select name="circuit" required>
+                            <option value="">Choisissez un circuit</option>
+                            <option value="nord">Circuit Nord</option>
+                            <option value="sud">Circuit Sud</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <input type="date" name="date" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="number" name="guests" placeholder="Nombre de personnes" required>
+                    </div>
+                    <button type="submit" class="submit-btn">Réserver</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>MTA CAMEROUN</h3>
+                    <p>Votre partenaire touristique et logistique au Cameroun</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>Phone: +237 699 999 999</p>
+                    <p>Email: contact@mtacameroon.com</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 MTA CAMEROUN. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/main.js"></script>
+</body>
+</html>
