@@ -41,7 +41,25 @@
     </nav>
 
     <!-- Hero Section -->
-    <header class="hero" data-background="../../images/transport.jpg">
+    <header class="hero" style="background-image: url('../../images/port.jpg');">
+        <style>
+         
+            .hero::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(0, 0, 0, 0.5); /* Couche d'assombrissement */
+                z-index: 1;
+            }
+            .hero-content {
+                position: relative;
+                z-index: 2;
+                padding: 2rem;
+            }
+        </style>
         <div class="hero-content">
             <h1>Votre Partenaire Logistique</h1>
             <p>Transport et logistique complète au Cameroun et à l'international</p>
@@ -65,7 +83,7 @@
         </div>
 
         <div class="service-item">
-            <img src="../../images/truck.jpg" alt="Transport Routier">
+            <img src="../../images/camionnette.png" alt="Transport Routier">
             <div class="service-content">
                 <h2>Transport Routier</h2>
                 <p>Notre réseau routier couvre l'ensemble du Cameroun avec des délais de livraison maximum de 48 heures.</p>
@@ -79,7 +97,7 @@
         </div>
 
         <div class="service-item">
-            <img src="../../images/maritime.jpg" alt="Transport Maritime">
+            <img src="../../images/container-ship-6631117_640.jpg" alt="Transport Maritime">
             <div class="service-content">
                 <h2>Transport Maritime</h2>
                 <p>Service de transport maritime entre la France et le Cameroun, et vice versa.</p>
@@ -94,7 +112,7 @@
         </div>
 
         <div class="service-item">
-            <img src="../../images/aerien.jpg" alt="Fret Aérien">
+            <img src="../../images/aerien.png" alt="Fret Aérien">
             <div class="service-content">
                 <h2>Fret Aérien France-Cameroun</h2>
                 <p>Solution rapide pour vos envois urgents entre la France et le Cameroun.</p>
@@ -147,16 +165,31 @@
             </div>
             <div class="footer-section">
                 <h3>Contact</h3>
-                <p>Email: contact@mtacolis.com</p>
-                <p>Tél: +237 XXX XXX XXX</p>
+                <p><a href="mailto:contact@mtacolis.com">Email: contact@mtacolis.com</a></p>
+                <p>Tél: +237 640657588</p>
+                <p>Tél: +237 697974848</p>
             </div>
             <div class="footer-section">
-                <h3>Liens Rapides</h3>
+                <h3>SERVICES</h3>
                 <ul>
-                    <li><a href="../index.html">Accueil</a></li>
-                    <li><a href="tracking.html">Suivi Colis</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="transport.html">Transport/Logistique</a></li>
+                    <li><a href="Restauration.html">Restauration</a></li>
+                    <li><a href="tourisme.html">Tourisme</a></li>
                 </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Suivez-nous</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/people/MTA-Cameroun/61573559716135/" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/camerounmta/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/company/mta-gopic-cameroun/posts/?feedView=all" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://x.com/MTACameroun" target="_blank"><i class="fab fa-x"></i></a>
+                    <a href="https://www.tiktok.com/@mta.cameroun" target="_blank"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Membre de</h3>
+                <div class="iata-logo" style="background-image: url('../../images/IATA.png');"></div>
             </div>
         </div>
         <div class="footer-bottom">

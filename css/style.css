@@ -411,9 +411,9 @@ body {
 }
 
 /* Hero Section pour la page transport */
-.hero[data-background="../../images/transport.jpg"]::before {
-    background-image: url('../../images/transport.jpg');
-}
+/* .hero[data-background="../../images/aerien.png"]::before {
+    background-image: url('../../images/aerien.png');
+} */
 
 /* Styles communs pour les sections hero */
 .hero {
@@ -606,6 +606,7 @@ body {
     width: 100%;
     height: 200px;
     object-fit: cover;
+    object-position: center;
     border-radius: 5px;
     margin-bottom: 1rem;
 }
@@ -630,6 +631,7 @@ body {
     height: 250px;
     object-fit: cover;
     transition: transform 0.3s ease;
+    object-position: center;
 }
 
 .service-card:hover img, .menu-card:hover img {
@@ -787,7 +789,7 @@ footer {
 .footer-content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
+    gap: 3rem;
     margin-bottom: 2rem;
 }
 
@@ -831,9 +833,10 @@ footer {
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 2rem;
-    margin-bottom: 4rem;
-    padding: 2rem;
-    background: var(--light-bg);
+    margin-bottom: 6rem;
+    padding: 4rem;
+    background: transparent;
+    border: 3px solid var(--primary-color);
     border-radius: 10px;
 }
 
@@ -1587,6 +1590,95 @@ img::before {
     border-right: 4px solid #007a5e; /* Cameroon flag color */
 }
 
+.values-section {
+    margin-bottom: 60px;
+}
+
+.values-section h3 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #2c3e50;
+    font-size: 1.8rem;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+}
+
+.value-item {
+    text-align: center;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.value-item:hover {
+    transform: translateY(-5px);
+}
+
+.value-item i {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.value-item span {
+    display: block;
+    color: #2c3e50;
+    font-size: 1.1rem;
+}
+
+.conclusion {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.conclusion h3 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+.conclusion p {
+    margin-bottom: 30px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+    background: darken(var(--primary-color), 10%);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .introduction {
+        grid-template-columns: 1fr;
+    }
+    
+    .locations {
+        grid-template-columns: 1fr;
+    }
+    
+    .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 /* Styles pour les pages de services */
 
 /* Restauration */
@@ -1815,7 +1907,7 @@ img::before {
 }
 
 .social-links a {
-    color: var(--primary-color);
+    color: white;
     font-size: 1.5rem;
     transition: color 0.3s ease;
 }
@@ -1834,4 +1926,18 @@ img::before {
     .menu-card img {
         height: 250px;
     }
+}
+
+
+
+
+
+.iata-logo {
+    width: 80px;
+    height: 50px;
+    background-size: contain;
+    background-position: left center;
+    background-repeat: no-repeat;
+    margin: 0;
+    display: block;
 }
