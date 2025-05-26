@@ -587,15 +587,17 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
+    margin: 2rem 0;
 }
 
 .service-card {
-    background: var(--white);
-    padding: 2rem;
+    background: white;
     border-radius: 10px;
+    padding: 2rem;
     text-align: center;
-    transition: transform 0.3s;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    margin-bottom: 3rem;
 }
 
 .service-card:hover {
@@ -606,9 +608,8 @@ body {
     width: 100%;
     height: 200px;
     object-fit: cover;
-    object-position: center;
-    border-radius: 5px;
-    margin-bottom: 1rem;
+    border-radius: 10px 10px 0 0;
+    margin-bottom: 1.5rem;
 }
 
 /* Cards pour services et menus */
@@ -827,56 +828,92 @@ footer {
 
 .services-detailed {
     padding: 5rem 5%;
+    padding-top: 0;
 }
 
 .service-item {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 2rem;
-    margin-bottom: 6rem;
-    padding: 4rem;
-    background: transparent;
-    border: 3px solid var(--primary-color);
-    border-radius: 10px;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    margin-bottom: 3rem;
+    position: relative;
 }
 
-.service-item:nth-child(even) {
-    grid-template-columns: 2fr 1fr;
+.service-item:hover {
+    transform: translateY(-5px);
 }
 
 .service-item img {
     width: 100%;
-    height: 300px;
+    height: 200px;
     object-fit: cover;
-    border-radius: 5px;
+    border-radius: 15px 15px 0 0;
+    transition: transform 0.3s ease;
 }
 
-.service-content {
-    padding: 1rem;
+.service-item:hover img {
+    transform: scale(1.1);
 }
 
-.service-content h2 {
+.service-item h2 {
     color: var(--primary-color);
-    margin-bottom: 1rem;
+    margin: 1.5rem 1.5rem 1rem;
+    font-size: 1.5rem;
+    text-align: center;
 }
 
-.service-content ul {
+.service-item p {
+    color: #555;
+    margin: 0 1.5rem 1.5rem;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.service-item ul {
     list-style: none;
-    margin-top: 1rem;
+    padding: 0;
+    margin: 0 1.5rem 1.5rem;
 }
 
-.service-content ul li {
-    margin-bottom: 0.5rem;
-    padding-left: 1.5rem;
+.service-item li {
+    padding: 0.75rem 0;
+    font-size: 1rem;
+    color: #555;
     position: relative;
+    padding-left: 1.5rem;
 }
 
-.service-content ul li:before {
+.service-item li::before {
     content: "✓";
     color: var(--secondary-color);
     position: absolute;
     left: 0;
+    font-size: 1.2rem;
 }
+
+/* Responsive Design pour les service-item */
+@media (max-width: 768px) {
+    .service-item img {
+        height: 150px;
+    }
+    
+    .service-item h2 {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .service-item img {
+        height: 120px;
+    }
+    
+    .service-item h2 {
+        font-size: 1.2rem;
+    }
+}
+
 /* Styles pour la page de suivi */
 .tracking-system {
     padding: 5rem 5%;
@@ -1017,7 +1054,7 @@ footer {
     padding: 2rem;
     background: var(--light-bg);
     border-radius: 10px;
-    transition: transform 0.3s;
+    transition: transform 0.3s ease;
 }
 
 .value-item:hover {
@@ -1228,7 +1265,7 @@ img::before {
     width: 100%;
     height: 400px;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 15px 15px 0 0;
     transition: transform 0.3s ease;
 }
 
@@ -1318,6 +1355,12 @@ img::before {
     transition: all 0.3s ease;
 }
 
+/* Style spécifique pour l'icône de l'entrepôt */
+.goods-icon i.fa-cart-flatbed-suitcase {
+    font-size: 1.8rem;
+    margin-top: 0.2rem;
+}
+
 /* Où nous trouver Section */
 .ou-nous-trouver {
     padding: 80px 0;
@@ -1394,7 +1437,7 @@ img::before {
     padding: 2rem;
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease;
     position: relative;
     overflow: hidden;
 }
@@ -1732,6 +1775,7 @@ img::before {
     height: 200px;
     object-fit: cover;
     transition: transform 0.3s ease;
+    border-radius: 10px 10px 0 0;
 }
 
 .menu-card:hover img {
@@ -1928,16 +1972,359 @@ img::before {
     }
 }
 
+/* Styles pour les services de restauration */
+.service-card {
+    background: white;
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
 
+.service-card:hover {
+    transform: translateY(-5px);
+}
 
+.service-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    background: rgba(var(--primary-color-rgb), 0.1);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+}
 
+.service-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
 
-.iata-logo {
-    width: 80px;
-    height: 50px;
-    background-size: contain;
-    background-position: left center;
-    background-repeat: no-repeat;
+.service-list {
+    list-style: none;
+    padding: 0;
     margin: 0;
-    display: block;
+}
+
+.service-list li {
+    padding: 0.5rem 0;
+    font-size: 1rem;
+    color: #555;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.service-list li::before {
+    content: "✓";
+    color: var(--secondary-color);
+    position: absolute;
+    left: 0;
+    font-size: 1.2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Styles pour les service-card dans la page transport */
+.service-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.img-container {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover .img-container img {
+    transform: scale(1.1);
+}
+
+.service-content {
+    padding: 2rem;
+}
+
+.service-content h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.service-content p {
+    color: #555;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.service-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.service-list li {
+    padding: 0.5rem 0;
+    font-size: 1rem;
+    color: #555;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.service-list li::before {
+    content: "✓";
+    color: var(--secondary-color);
+    position: absolute;
+    left: 0;
+    font-size: 1.2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .img-container {
+        height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .img-container {
+        height: 120px;
+    }
+}
+
+/* Styles pour les types de marchandises */
+.goods-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 2.5rem;
+    margin: 3rem 0;
+    padding: 2rem;
+    /* background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(245, 245, 245, 0.95)); */
+    /* border-radius: 20px; */
+    /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); */
+    position: relative;
+    overflow: hidden;
+}
+
+.goods-grid::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    /* background: linear-gradient(45deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.3)); */
+    transform: rotate(45deg);
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: -1;
+}
+
+.goods-item {
+    background: white;
+    border-radius: 15px;
+    padding: 1.8rem;
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+}
+
+.goods-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.3));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.goods-item:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    border-color: var(--primary-color);
+}
+
+.goods-item:hover::before {
+    opacity: 1;
+}
+
+.goods-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.2rem;
+    background: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.goods-icon i {
+    font-size: 2.4rem;
+    color: white;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.goods-item:hover .goods-icon i {
+    transform: scale(1.2);
+}
+
+.goods-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.2rem;
+    background: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.goods-icon i {
+    font-size: 2rem;
+    color: white;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.goods-item:hover .goods-icon i {
+    transform: scale(1.2);
+}
+
+.goods-item h3 {
+    color: var(--primary-color);
+    margin: 0;
+    font-size: 1.3rem;
+    font-weight: 600;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    line-height: 1.4;
+}
+
+.goods-item:hover h3 {
+    color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+/* Effet de vague */
+.goods-item::after {
+    content: '';
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
+    transform: skewY(10deg);
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: -1;
+}
+
+.goods-item:hover::after {
+    bottom: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .goods-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 2rem;
+        padding: 1.5rem;
+    }
+    
+    .goods-item {
+        padding: 1.5rem;
+    }
+    
+    .goods-icon {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .goods-icon i {
+        font-size: 2rem;
+    }
+    
+    .goods-item h3 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .goods-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 1.5rem;
+        padding: 1rem;
+    }
+    
+    .goods-item {
+        padding: 1.2rem;
+    }
+    
+    .goods-icon {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .goods-icon i {
+        font-size: 1.8rem;
+    }
+    
+    .goods-item h3 {
+        font-size: 1.1rem;
+    }
 }
