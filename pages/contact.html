@@ -7,7 +7,36 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/responsive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
+    <style>
+        /* Ajouter les styles pour les animations et les effets visuels */
+        .hover-effect {
+            transition: all 0.3s ease-in-out;
+        }
+        .hover-effect:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        .input-field {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .input-field:focus {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+        .submit-btn {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .submit-btn:hover {
+            background-color: #3e8e41;
+        }
+    </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -45,85 +74,425 @@
         <p>Notre équipe est à votre écoute</p>
     </header>
 
-    <!-- Contact Content -->
-    <section class="contact-content">
-        <div class="contact-grid">
-            <!-- Informations de contact -->
-            <div class="contact-info">
-                <h2>Nos Coordonnées</h2>
-                
-                <div class="info-block">
-                    <h3>Siège Social</h3>
-                    <p><i class="icon-location"></i> Douala, Cameroun</p>
-                    <p><i class="icon-phone"></i> +237 XXX XXX XXX</p>
-                    <p><i class="icon-email"></i> contact@mtacolis.com</p>
+    <!-- Section "Pourquoi nous contacter" -->
+    <section class="why-contact">
+        <div class="container">
+            <h2 class="section-title">Pourquoi nous contacter ?</h2>
+            <div class="contact-reasons">
+                <div class="reason-item hover-effect">
+                    <div class="reason-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3>Transport et Logistique</h3>
+                    <p>Organisation de vos transports nationaux et internationaux</p>
                 </div>
-
-                <div class="info-block">
-                    <h3>Heures d'Ouverture</h3>
-                    <p>Lundi - Vendredi: 8h00 - 18h00</p>
-                    <p>Samedi: 9h00 - 15h00</p>
-                    <p>Dimanche: Fermé</p>
+                <div class="reason-item hover-effect">
+                    <div class="reason-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3>Restauration</h3>
+                    <p>Réservation de restaurants et services de restauration</p>
                 </div>
-
-                <div class="info-block">
-                    <h3>Service Client</h3>
-                    <p>Support téléphonique 24/7</p>
-                    <p>Numéro d'urgence: +237 XXX XXX XXX</p>
+                <div class="reason-item hover-effect">
+                    <div class="reason-icon">
+                        <i class="fas fa-map-signs"></i>
+                    </div>
+                    <h3>Tourisme</h3>
+                    <p>Organisation de vos voyages et circuits touristiques</p>
                 </div>
-            </div>
-
-            <!-- Formulaire de contact -->
-            <div class="contact-form">
-                <h2>Envoyez-nous un Message</h2>
-                <form id="contactForm">
-                    <div class="form-group">
-                        <label for="name">Nom Complet</label>
-                        <input type="text" id="name" name="name" required>
+                <div class="reason-item hover-effect">
+                    <div class="reason-icon">
+                        <i class="fas fa-info-circle"></i>
                     </div>
-
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="phone">Téléphone</label>
-                        <input type="tel" id="phone" name="phone" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="subject">Sujet</label>
-                        <select id="subject" name="subject" required>
-                            <option value="">Sélectionnez un sujet</option>
-                            <option value="devis">Demande de devis</option>
-                            <option value="info">Renseignements</option>
-                            <option value="reclamation">Réclamation</option>
-                            <option value="autre">Autre</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
-                    </div>
-
-                    <button type="submit" class="submit-btn">Envoyer le message</button>
-                </form>
-            </div>
-        </div>
-
-        <!-- Carte des Agences -->
-        <div class="agencies-map">
-            <h2>Nos Agences</h2>
-            <div class="map-container">
-                <!-- Intégrer ici une carte Google Maps ou OpenStreetMap -->
-                <div class="map-placeholder">
-                    <p>Carte des agences MTA CAMEROUN au Cameroun</p>
+                    <h3>Informations</h3>
+                    <p>Questions sur nos services et tarifs</p>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Section Contact -->
+    <section class="contact-content">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Informations de contact -->
+                <div class="contact-info">
+                    <h2 class="section-title">Nos Coordonnées</h2>
+                    
+                    <div class="info-block">
+                        <h3>Siège Social</h3>
+                        <div class="contact-list">
+                            <div class="contact-item hover-effect">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <p>336 Rue Kitchener, Bonanjo - Douala / Cameroun</p>
+                            </div>
+                            <div class="contact-item hover-effect">
+                                <i class="fa-solid fa-phone"></i>
+                                <p>+237 640657588</p>
+                            </div>
+                            <div class="contact-item hover-effect">
+                                <i class="fa-solid fa-phone"></i>
+                                <p>+237 697974848</p>
+                            </div>
+                            <div class="contact-item hover-effect">
+                                <i class="fa-solid fa-envelope"></i>
+                                <p>contact@mtacolis.com</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-block">
+                        <h3>Heures d'Ouverture</h3>
+                        <div class="hours-grid">
+                            <div class="day-hour hover-effect">
+                                <span>Lundi - Vendredi:</span>
+                                <span>8h00 - 18h00</span>
+                            </div>
+                            <div class="day-hour hover-effect">
+                                <span>Samedi:</span>
+                                <span>9h00 - 15h00</span>
+                            </div>
+                            <div class="day-hour hover-effect">
+                                <span>Dimanche:</span>
+                                <span>Fermé</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-block">
+                        <h3>Service Client</h3>
+                        <div class="contact-list">
+                            <div class="contact-item hover-effect">
+                                <i class="fa-solid fa-headset"></i>
+                                <p>Support téléphonique 24/7</p>
+                            </div>
+                            <div class="contact-item hover-effect">
+                                <i class="fa-solid fa-exclamation-triangle"></i>
+                                <p>Numéro d'urgence: +237 XXX XXX XXX</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formulaire de contact -->
+                <div class="contact-form">
+                    <h2 class="section-title">Contactez-nous</h2>
+                    <form id="contact-form" class="contact-form-container">
+                        <div class="form-group">
+                            <label for="name">Nom complet</label>
+                            <input type="text" id="name" name="name" required 
+                                   placeholder="Votre nom complet" 
+                                   class="input-field hover-effect">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required 
+                                   placeholder="votre.email@exemple.com" 
+                                   class="input-field hover-effect">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Téléphone</label>
+                            <input type="tel" id="phone" name="phone" required 
+                                   placeholder="+237 XXX XXX XXX" 
+                                   class="input-field hover-effect">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Sujet</label>
+                            <select id="subject" name="subject" required class="input-field hover-effect">
+                                <option value="">Sélectionnez un sujet</option>
+                                <option value="transport">Transport/Logistique</option>
+                                <option value="restauration">Restauration</option>
+                                <option value="tourisme">Tourisme</option>
+                                <option value="autre">Autre</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" required 
+                                      placeholder="Votre message..." 
+                                      rows="5" 
+                                      class="input-field hover-effect"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" required>
+                                <span class="checkmark"></span>
+                                J'accepte les conditions d'utilisation
+                            </label>
+                        </div>
+
+                        <button type="submit" class="submit-btn hover-effect">
+                            <i class="fas fa-paper-plane"></i>
+                            Envoyer le message
+                        </button>
+
+                        <div class="form-response"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Carte des Agences -->
+    <div class="agencies-map">
+        <div class="container">
+            <h2 class="section-title">Nos Agences</h2>
+            
+                
+                <!-- Liste détaillée des agences -->
+                <div class="agencies-grid">
+                    <!-- Région de l'Extrême-Nord -->
+                    <div class="region" data-region="extreme-nord">
+                        <h3>Extrême-Nord</h3>
+                        <div class="map-item hover-effect">
+                            <h4>Kaélé</h4>
+                            <p>Représentation régionale</p>
+                            <p>Rue du Marché, Centre-ville</p>
+                        </div>
+                        <div class="map-item hover-effect">
+                            <h4>Mora</h4>
+                            <p>Représentation régionale</p>
+                            <p>Rue de la République, Quartier Central</p>
+                        </div>
+                        <div class="map-item hover-effect">
+                            <h4>Mokolo</h4>
+                            <p>Représentation régionale</p>
+                            <p>Rue de la Liberté, Centre-ville</p>
+                        </div>
+                        <div class="map-item hover-effect">
+                            <h4>Maroua</h4>
+                            <p>Représentation régionale</p>
+                            <p>Rue de la Paix, Quartier Centre</p>
+                        </div>
+                        <div class="map-item hover-effect">
+                            <h4>Yagoua</h4>
+                            <p>Représentation régionale</p>
+                            <p>Rue de la Gare, Centre-ville</p>
+                        </div>
+                        <div class="map-item hover-effect">
+                            <h4>Kousseri</h4>
+                            <p>Représentation régionale</p>
+                            <p>Rue du Commerce, Quartier Central</p>
+                        </div>
+                    </div>
+
+                    <!-- Région de l'Adamaoua -->
+                    <div class="region" data-region="adamaoua">
+                        <h3>Adamaoua</h3>
+                        <div class="map-item hover-effect">
+                            <h4>Tibati</h4>
+                            <p>Représentation régionale</p>
+                            <p>Rue du Marché, Centre-ville</p>
+                        </div>
+                        <div class="map-item hover-effect">
+                            <h4>Meiganga</h4>
+                            <p>Représentation régionale</p>
+                            <p>Rue de la République, Quartier Central</p>
+                        </div>
+                        <div class="map-item hover-effect">
+                            <h4>Banyo</h4>
+                            <p>Représentation régionale</p>
+                            <p>Rue de la Liberté, Centre-ville</p>
+                        </div>
+                        
+                        <div class="map-item hover-effect">
+                            <h4>Ngaoundéré</h4>
+                            <p>Représentation régionale</p>
+                            <p>Rue de la Paix, Quartier Centre</p>
+                        </div>
+                        <div class="map-item hover-effect">
+                            <h4>Tignère</h4>
+                            <p>Représentation régionale</p>
+                            <p>Rue de la Gare, Centre-ville</p>
+                        </div>
+                    </div>
+
+
+                    <!-- Région du Centre -->
+                    <div class="region" data-region="centre">
+                        <h3>Centre</h3>
+                        <div class="map-item hover-effect siège">
+                            <h4>Yaoundé</h4>
+                            <p>Siège administratif</p>
+                            <p>Rue du Palais, Centre-ville</p>
+                        </div>
+                        <div class="map-item hover-effect">
+                            <h4>Bafia</h4>
+                            <p>Représentation régionale</p>
+                            <p>Rue de la Gare, Centre-ville</p>
+                        </div>
+                        <div class="map-item hover-effect">
+                            <h4>Sangmélima</h4>
+                            <p>Représentation régionale</p>
+                            <p>Rue de la Liberté, Centre-ville</p>
+                        </div>
+                        <div class="map-item hover-effect">
+                            <h4>Mbalmayo</h4>
+                            <p>Représentation régionale</p>
+                            <p>Rue de l'Indépendance, Quartier Centre</p>
+                        </div>
+                        
+                        <div class="map-item hover-effect">
+                            <h4>Nanga-Eboko</h4>
+                            <p>Représentation régionale</p>
+                            <p>Rue de la République, Quartier Central</p>
+                        </div>
+                    </div>
+
+                    
+                   
+                    <!-- Région de l'Ouest -->
+                    <div class="region" data-region="ouest">
+                        <h3>Ouest</h3>
+                        <div class="map-item hover-effect">
+                            <h4>Bafoussam</h4>
+                            <p>Représentation régionale</p>
+                            <p>Rue de la République, Quartier Centre</p>
+                        </div>
+                        <div class="map-item hover-effect">
+                            <h4>Dschang</h4>
+                            <p>Représentation régionale</p>
+                            <p>Rue de l'Indépendance, Centre-ville</p>
+                        </div>
+                        <div class="map-item hover-effect">
+                            <h4>Mbouda</h4>
+                            <p>Représentation régionale</p>
+                            <p>Rue du Marché, Centre-ville</p>
+                        </div>
+                    </div>
+
+                    <!-- Région du Nord -->
+                    <div class="region" data-region="nord">
+                        <h3>Nord</h3>
+                        <div class="map-item hover-effect">
+                            <h4>Garoua</h4>
+                            <p>Représentation régionale</p>
+                            <p>Rue du Marché, Centre-ville</p>
+                        </div>
+                        <div class="map-item hover-effect">
+                            <h4>Figuil</h4>
+                            <p>Représentation régionale</p>
+                            <p>Rue de la République, Quartier Central</p>
+                        </div>
+                        <div class="map-item hover-effect">
+                            <h4>Guider</h4>
+                            <p>Représentation régionale</p>
+                            <p>Rue de la Liberté, Centre-ville</p>
+                        </div>
+                        <div class="map-item hover-effect">
+                            <h4>Poli</h4>
+                            <p>Représentation régionale</p>
+                            <p>Rue de la Paix, Quartier Centre</p>
+                        </div>
+                        <div class="map-item hover-effect">
+                            <h4>Tcholliré</h4>
+                            <p>Représentation régionale</p>
+                            <p>Rue de la Gare, Centre-ville</p>
+                        </div>
+                        <div class="map-item hover-effect">
+                            <h4>Touboro</h4>
+                            <p>Représentation régionale</p>
+                            <p>Rue du Commerce, Quartier Central</p>
+                        </div>
+                    </div>
+
+                   
+                    
+
+                    <!-- Région du Sud -->
+                    <div class="region" data-region="sud">
+                        <h3>Sud</h3>
+                        <div class="map-item hover-effect">
+                            <h4>Ebolowa</h4>
+                            <p>Représentation régionale</p>
+                            <p>Rue de la Gare, Quartier Central</p>
+                        </div>
+                        <div class="map-item hover-effect">
+                            <h4>Kribi</h4>
+                            <p>Représentation régionale</p>
+                            <p>Rue de la Mer, Quartier Central</p>
+                        </div>
+                    </div>
+
+                    <!-- Région de l'Est -->
+                    <div class="region" data-region="est">
+                        <h3>Est</h3>
+                        <div class="map-item hover-effect">
+                            <h4>Belabo</h4>
+                            <p>Représentation régionale</p>
+                            <p>Rue de la Gare, Quartier Central</p>
+                        </div>
+                        <div class="map-item hover-effect">
+                            <h4>Bertoua</h4>
+                            <p>Représentation régionale</p>
+                            <p>Rue de la Paix, Centre-ville</p>
+                        </div>
+                    </div>
+
+                    
+                    
+
+                    <!-- Région du Littoral -->
+                    <div class="region" data-region="littoral">
+                        <h3>Littoral</h3>
+                        <div class="map-item hover-effect siège">
+                            <h4>Douala</h4>
+                            <p>Siège social</p>
+                            <p>336 Rue Kitchener, Bonanjo</p>
+                        </div>
+                        <div class="map-item hover-effect">
+                            <h4>Edea</h4>
+                            <p>Représentation régionale</p>
+                            <p>Rue du Port, Centre-ville</p>
+                        </div>
+                    </div>
+
+
+                     <!-- Région du Sud-Ouest -->
+                     <div class="region" data-region="sud-ouest">
+                        <h3>Sud-Ouest</h3>
+                        <div class="map-item hover-effect">
+                            <h4>Limbé</h4>
+                            <p>Représentation régionale</p>
+                            <p>Rue principale, Centre-ville</p>
+                        </div>
+                        <div class="map-item hover-effect">
+                            <h4>Buéa</h4>
+                            <p>Représentation régionale</p>
+                            <p>Rue de la Paix, Quartier Universitaire</p>
+                        </div>
+                        <div class="map-item hover-effect">
+                            <h4>Kumba</h4>
+                            <p>Représentation régionale</p>
+                            <p>Avenue de la Liberté, Centre-ville</p>
+                        </div>
+                    </div>
+
+                     <!-- Région du Nord-Ouest -->
+                     <div class="region" data-region="nord-ouest">
+                        <h3>Nord-Ouest</h3>
+                        <div class="map-item hover-effect">
+                            <h4>Bamenda</h4>
+                            <p>Représentation régionale</p>
+                            <p>Rue du Commerce, Centre-ville</p>
+                        </div>
+                    </div>
+
+
+
+
+
+
+                    
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer>
