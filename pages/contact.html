@@ -25,17 +25,7 @@
         .input-field:focus {
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
         }
-        .submit-btn {
-            background-color: #4CAF50;
-            color: #fff;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .submit-btn:hover {
-            background-color: #3e8e41;
-        }
+        
     </style>
 </head>
 <body>
@@ -182,26 +172,26 @@
                             <label for="name">Nom complet</label>
                             <input type="text" id="name" name="name" required 
                                    placeholder="Votre nom complet" 
-                                   class="input-field hover-effect">
+                                   class="input-field ">
                         </div>
                         
                         <div class="form-group">
                             <label for="email">Email</label>
                             <input type="email" id="email" name="email" required 
                                    placeholder="votre.email@exemple.com" 
-                                   class="input-field hover-effect">
+                                   class="input-field ">
                         </div>
 
                         <div class="form-group">
                             <label for="phone">Téléphone</label>
                             <input type="tel" id="phone" name="phone" required 
                                    placeholder="+237 XXX XXX XXX" 
-                                   class="input-field hover-effect">
+                                   class="input-field ">
                         </div>
 
                         <div class="form-group">
                             <label for="subject">Sujet</label>
-                            <select id="subject" name="subject" required class="input-field hover-effect">
+                            <select id="subject" name="subject" required class="input-field " style="height: auto;">
                                 <option value="">Sélectionnez un sujet</option>
                                 <option value="transport">Transport/Logistique</option>
                                 <option value="restauration">Restauration</option>
@@ -214,19 +204,12 @@
                             <label for="message">Message</label>
                             <textarea id="message" name="message" required 
                                       placeholder="Votre message..." 
-                                      rows="5" 
-                                      class="input-field hover-effect"></textarea>
+                                      rows="10" 
+                                      class="input-field "></textarea>
                         </div>
 
-                        <div class="form-group">
-                            <label class="checkbox-label">
-                                <input type="checkbox" required>
-                                <span class="checkmark"></span>
-                                J'accepte les conditions d'utilisation
-                            </label>
-                        </div>
 
-                        <button type="submit" class="submit-btn hover-effect">
+                        <button type="submit" class="submit-btn ">
                             <i class="fas fa-paper-plane"></i>
                             Envoyer le message
                         </button>
