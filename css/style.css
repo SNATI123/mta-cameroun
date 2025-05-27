@@ -1153,33 +1153,6 @@ footer {
     resize: vertical;
 }
 
-
-
-
-
-.agencies-map {
-    text-align: center;
-}
-
-.agencies-map h2 {
-    color: var(--primary-color);
-    margin-bottom: 2rem;
-}
-
-.map-container {
-    height: 400px;
-    background: var(--light-bg);
-    border-radius: 10px;
-}
-
-.map-placeholder {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #666;
-}
-
 /* Responsive pour la page contact */
 @media screen and (max-width: 768px) {
     .contact-grid {
@@ -2842,5 +2815,24 @@ img::before {
     
     .map-item p {
         font-size: 0.9rem;
+    }
+}
+
+/* Styles pour le logo IATA */
+.iata-logo {
+    width: 100px;
+    height: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* margin: 20px auto; */
+    display: block;
+}
+
+/* Responsive adjustments for IATA logo */
+@media (max-width: 768px) {
+    .iata-logo {
+        width: 80px;
+        height: 80px;
     }
 }
