@@ -1215,7 +1215,6 @@ footer {
 @media (max-width: 768px) {
     .about-intro {
         grid-template-columns: 1fr;
-        gap: 2rem;
     }
     
     .about-image img {
@@ -1417,7 +1416,8 @@ footer {
     transform: translateX(-50%);
     width: 80px;
     height: 3px;
-    background: white;
+    background: linear-gradient(90deg, white, #ff002b);
+    border-radius: 1.5px;
 }
 
 .cuisine-grid {
@@ -2869,7 +2869,7 @@ img::before {
 
 /* Section Réservation */
 .reservation {
-    padding: 80px 0;
+    padding: 120px 0 150px;
     background: linear-gradient(135deg, #0056b3 0%, #ff002b 100%);
     color: white;
 }
@@ -2884,6 +2884,20 @@ img::before {
     font-size: 2.2rem;
     margin-bottom: 20px;
     color: white;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.reservation h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(90deg, white, #ff002b);
+    border-radius: 1.5px;
 }
 
 .reservation-text {
