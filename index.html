@@ -102,12 +102,12 @@
                 </div> -->
             </div>
 
-            <div class="specialist-section">
+            <div class="specialist-section" style="--delay: 1;">
                 <h2>Où nous trouver</h2>
             </div>
 
             <div class="locations">
-                <div class="location-card location-france">
+                <div class="location-card location-france" style="--delay: 2;">
                     <div class="location-header">
                         <img src="images/france-flag.png" alt="Drapeau français" class="flag-image">
                         <h4>MTA France : Hub à Roissy-Charles de Gaulle</h4>
@@ -115,7 +115,7 @@
                     <p>Grâce à une plateforme située à 5 mn des différentes terminaux de l'aéroport Roissy-Charles de Gaulle, MTA Express garantit un suivi et un traitement optimal des opérations, une récupération de vos colis dès l'arrivée de l'avion et un transfert rapide vers la destination finale.</p>
                 </div>
                 
-                <div class="location-card location-cameroun">
+                <div class="location-card location-cameroun" style="--delay: 3;">
                     <div class="location-header">
                         <img src="images/cameroon-flag.png" alt="Drapeau camerounais" class="flag-image">
                         <h4>MTA Cameroun : plateforme à Douala</h4>
@@ -124,38 +124,38 @@
                 </div>
             </div>
 
-            <div class="values-section">
+            <div class="values-section" style="--delay: 4;">
                 <h3>MTA Express vous propose la réponse la plus adaptée à vos besoins grâce à la qualité de ses services et à ses compétences :</h3>
                 <div class="values-grid">
-                    <div class="value-item">
+                    <div class="value-item" style="--delay: 5;">
                         <i class="fa-solid fa-headset"></i>
                         <span>Ecoute et exigence</span>
                     </div>
-                    <div class="value-item">
+                    <div class="value-item" style="--delay: 6;">
                         <i class="fa-solid fa-clock"></i>
                         <span>Respect des délais</span>
                     </div>
-                    <div class="value-item">
+                    <div class="value-item" style="--delay: 7;">
                         <i class="fa-solid fa-shield"></i>
                         <span>Sécurité de vos envois</span>
                     </div>
-                    <div class="value-item">
+                    <div class="value-item" style="--delay: 8;">
                         <i class="fa-solid fa-arrows-rotate"></i>
                         <span>Flexibilité</span>
                     </div>
-                    <div class="value-item">
+                    <div class="value-item" style="--delay: 9;">
                         <i class="fa-solid fa-calculator"></i>
                         <span>Etude tarifaire</span>
                     </div>
-                    <div class="value-item">
+                    <div class="value-item" style="--delay: 10;">
                         <i class="fa-solid fa-puzzle-piece"></i>
                         <span>Solution sur mesure</span>
                     </div>
-                    <div class="value-item">
+                    <div class="value-item" style="--delay: 11;">
                         <i class="fa-solid fa-network-wired"></i>
                         <span>Réseau éprouvé</span>
                     </div>
-                    <div class="value-item">
+                    <div class="value-item" style="--delay: 12;">
                         <i class="fa-solid fa-rocket"></i>
                         <span>Efficacité optimisée</span>
                     </div>
@@ -234,5 +234,34 @@
     </footer>
 
     <script src="js/main.js"></script>
+    <script>
+        // Fonction pour vérifier si un élément est dans la vue
+        function isInViewport(element) {
+            const rect = element.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+
+        // Fonction pour activer les animations
+        function handleScroll() {
+            const elements = document.querySelectorAll('.feature, .value-item, .intro-content, .intro-image, .footer-section');
+            
+            elements.forEach(element => {
+                if (isInViewport(element)) {
+                    element.style.animationPlayState = 'running';
+                }
+            });
+        }
+
+        // Ajouter l'événement scroll
+        window.addEventListener('scroll', handleScroll);
+        
+        // Appeler la fonction une première fois pour les éléments déjà dans la vue
+        handleScroll();
+    </script>
 </body>
 </html>
