@@ -149,19 +149,6 @@
                         </div>
                     </div>
 
-                    <div class="info-block">
-                        <h3>Service Client</h3>
-                        <div class="contact-list">
-                            <div class="contact-item hover-effect">
-                                <i class="fa-solid fa-headset"></i>
-                                <p>Support téléphonique 24/7</p>
-                            </div>
-                            <div class="contact-item hover-effect">
-                                <i class="fa-solid fa-exclamation-triangle"></i>
-                                <p>Numéro d'urgence: +237 XXX XXX XXX</p>
-                            </div>
-                        </div>
-                    </div>
                 </div>
 
                 <!-- Formulaire de contact -->
@@ -172,26 +159,26 @@
                             <label for="name">Nom complet</label>
                             <input type="text" id="name" name="name" required 
                                    placeholder="Votre nom complet" 
-                                   class="input-field ">
+                                   class="input-field">
                         </div>
                         
                         <div class="form-group">
                             <label for="email">Email</label>
                             <input type="email" id="email" name="email" required 
                                    placeholder="votre.email@exemple.com" 
-                                   class="input-field ">
+                                   class="input-field">
                         </div>
 
                         <div class="form-group">
                             <label for="phone">Téléphone</label>
                             <input type="tel" id="phone" name="phone" required 
                                    placeholder="+237 XXX XXX XXX" 
-                                   class="input-field ">
+                                   class="input-field">
                         </div>
 
                         <div class="form-group">
                             <label for="subject">Sujet</label>
-                            <select id="subject" name="subject" required class="input-field " style="height: auto;">
+                            <select id="subject" name="subject" required class="input-field">
                                 <option value="">Sélectionnez un sujet</option>
                                 <option value="transport">Transport/Logistique</option>
                                 <option value="restauration">Restauration</option>
@@ -202,17 +189,10 @@
 
                         <div class="form-group">
                             <label for="message">Message</label>
-                            <textarea id="message" name="message" required 
-                                      placeholder="Votre message..." 
-                                      rows="10" 
-                                      class="input-field "></textarea>
+                            <textarea id="message" name="message" required class="input-field" rows="5" placeholder="Votre message"></textarea>
                         </div>
 
-
-                        <button type="submit" class="submit-btn ">
-                            <i class="fas fa-paper-plane"></i>
-                            Envoyer le message
-                        </button>
+                        <button type="submit" class="submit-button">Envoyer le message</button>
 
                         <div class="form-response"></div>
                     </form>
@@ -221,260 +201,7 @@
         </div>
     </section>
 
-    <!-- Carte des Agences -->
-    <div class="agencies-map">
-        <div class="container">
-            <h2 class="section-title">Nos Agences</h2>
-            
-                
-                <!-- Liste détaillée des agences -->
-                <div class="agencies-grid">
-                    <!-- Région de l'Extrême-Nord -->
-                    <div class="region" data-region="extreme-nord">
-                        <h3>Extrême-Nord</h3>
-                        <div class="map-item hover-effect">
-                            <h4>Kaélé</h4>
-                            <p>Représentation régionale</p>
-                            <p>Rue du Marché, Centre-ville</p>
-                        </div>
-                        <div class="map-item hover-effect">
-                            <h4>Mora</h4>
-                            <p>Représentation régionale</p>
-                            <p>Rue de la République, Quartier Central</p>
-                        </div>
-                        <div class="map-item hover-effect">
-                            <h4>Mokolo</h4>
-                            <p>Représentation régionale</p>
-                            <p>Rue de la Liberté, Centre-ville</p>
-                        </div>
-                        <div class="map-item hover-effect">
-                            <h4>Maroua</h4>
-                            <p>Représentation régionale</p>
-                            <p>Rue de la Paix, Quartier Centre</p>
-                        </div>
-                        <div class="map-item hover-effect">
-                            <h4>Yagoua</h4>
-                            <p>Représentation régionale</p>
-                            <p>Rue de la Gare, Centre-ville</p>
-                        </div>
-                        <div class="map-item hover-effect">
-                            <h4>Kousseri</h4>
-                            <p>Représentation régionale</p>
-                            <p>Rue du Commerce, Quartier Central</p>
-                        </div>
-                    </div>
-
-                    <!-- Région de l'Adamaoua -->
-                    <div class="region" data-region="adamaoua">
-                        <h3>Adamaoua</h3>
-                        <div class="map-item hover-effect">
-                            <h4>Tibati</h4>
-                            <p>Représentation régionale</p>
-                            <p>Rue du Marché, Centre-ville</p>
-                        </div>
-                        <div class="map-item hover-effect">
-                            <h4>Meiganga</h4>
-                            <p>Représentation régionale</p>
-                            <p>Rue de la République, Quartier Central</p>
-                        </div>
-                        <div class="map-item hover-effect">
-                            <h4>Banyo</h4>
-                            <p>Représentation régionale</p>
-                            <p>Rue de la Liberté, Centre-ville</p>
-                        </div>
-                        
-                        <div class="map-item hover-effect">
-                            <h4>Ngaoundéré</h4>
-                            <p>Représentation régionale</p>
-                            <p>Rue de la Paix, Quartier Centre</p>
-                        </div>
-                        <div class="map-item hover-effect">
-                            <h4>Tignère</h4>
-                            <p>Représentation régionale</p>
-                            <p>Rue de la Gare, Centre-ville</p>
-                        </div>
-                    </div>
-
-                    <!-- Région du Centre -->
-                    <div class="region" data-region="centre">
-                        <h3>Centre</h3>
-                        <div class="map-item hover-effect siège">
-                            <h4>Yaoundé</h4>
-                            <p>Siège administratif</p>
-                            <p>Rue du Palais, Centre-ville</p>
-                        </div>
-                        <div class="map-item hover-effect">
-                            <h4>Bafia</h4>
-                            <p>Représentation régionale</p>
-                            <p>Rue de la Gare, Centre-ville</p>
-                        </div>
-                        <div class="map-item hover-effect">
-                            <h4>Sangmélima</h4>
-                            <p>Représentation régionale</p>
-                            <p>Rue de la Liberté, Centre-ville</p>
-                        </div>
-                        <div class="map-item hover-effect">
-                            <h4>Mbalmayo</h4>
-                            <p>Représentation régionale</p>
-                            <p>Rue de l'Indépendance, Quartier Centre</p>
-                        </div>
-                        
-                        <div class="map-item hover-effect">
-                            <h4>Nanga-Eboko</h4>
-                            <p>Représentation régionale</p>
-                            <p>Rue de la République, Quartier Central</p>
-                        </div>
-                    </div>
-
-                    
-                   
-                    <!-- Région de l'Ouest -->
-                    <div class="region" data-region="ouest">
-                        <h3>Ouest</h3>
-                        <div class="map-item hover-effect">
-                            <h4>Bafoussam</h4>
-                            <p>Représentation régionale</p>
-                            <p>Rue de la République, Quartier Centre</p>
-                        </div>
-                        <div class="map-item hover-effect">
-                            <h4>Dschang</h4>
-                            <p>Représentation régionale</p>
-                            <p>Rue de l'Indépendance, Centre-ville</p>
-                        </div>
-                        <div class="map-item hover-effect">
-                            <h4>Mbouda</h4>
-                            <p>Représentation régionale</p>
-                            <p>Rue du Marché, Centre-ville</p>
-                        </div>
-                    </div>
-
-                    <!-- Région du Nord -->
-                    <div class="region" data-region="nord">
-                        <h3>Nord</h3>
-                        <div class="map-item hover-effect">
-                            <h4>Garoua</h4>
-                            <p>Représentation régionale</p>
-                            <p>Rue du Marché, Centre-ville</p>
-                        </div>
-                        <div class="map-item hover-effect">
-                            <h4>Figuil</h4>
-                            <p>Représentation régionale</p>
-                            <p>Rue de la République, Quartier Central</p>
-                        </div>
-                        <div class="map-item hover-effect">
-                            <h4>Guider</h4>
-                            <p>Représentation régionale</p>
-                            <p>Rue de la Liberté, Centre-ville</p>
-                        </div>
-                        <div class="map-item hover-effect">
-                            <h4>Poli</h4>
-                            <p>Représentation régionale</p>
-                            <p>Rue de la Paix, Quartier Centre</p>
-                        </div>
-                        <div class="map-item hover-effect">
-                            <h4>Tcholliré</h4>
-                            <p>Représentation régionale</p>
-                            <p>Rue de la Gare, Centre-ville</p>
-                        </div>
-                        <div class="map-item hover-effect">
-                            <h4>Touboro</h4>
-                            <p>Représentation régionale</p>
-                            <p>Rue du Commerce, Quartier Central</p>
-                        </div>
-                    </div>
-
-                   
-                    
-
-                    <!-- Région du Sud -->
-                    <div class="region" data-region="sud">
-                        <h3>Sud</h3>
-                        <div class="map-item hover-effect">
-                            <h4>Ebolowa</h4>
-                            <p>Représentation régionale</p>
-                            <p>Rue de la Gare, Quartier Central</p>
-                        </div>
-                        <div class="map-item hover-effect">
-                            <h4>Kribi</h4>
-                            <p>Représentation régionale</p>
-                            <p>Rue de la Mer, Quartier Central</p>
-                        </div>
-                    </div>
-
-                    <!-- Région de l'Est  -->
-                    <div class="region" data-region="est">
-                        <h3>Est</h3>
-                        <div class="map-item hover-effect">
-                            <h4>Belabo</h4>
-                            <p>Représentation régionale</p>
-                            <p>Rue de la Gare, Quartier Central</p>
-                        </div>
-                        <div class="map-item hover-effect">
-                            <h4>Bertoua</h4>
-                            <p>Représentation régionale</p>
-                            <p>Rue de la Paix, Centre-ville</p>
-                        </div>
-                    </div>
-
-                    
-                    
-
-                    <!-- Région du Littoral -->
-                    <div class="region" data-region="littoral">
-                        <h3>Littoral</h3>
-                        <div class="map-item hover-effect siège">
-                            <h4>Douala</h4>
-                            <p>Siège social</p>
-                            <p>336 Rue Kitchener, Bonanjo</p>
-                        </div>
-                        <div class="map-item hover-effect">
-                            <h4>Edea</h4>
-                            <p>Représentation régionale</p>
-                            <p>Rue du Port, Centre-ville</p>
-                        </div>
-                    </div>
-
-
-                     <!-- Région du Sud-Ouest -->
-                     <div class="region" data-region="sud-ouest">
-                        <h3>Sud-Ouest</h3>
-                        <div class="map-item hover-effect">
-                            <h4>Limbé</h4>
-                            <p>Représentation régionale</p>
-                            <p>Rue principale, Centre-ville</p>
-                        </div>
-                        <div class="map-item hover-effect">
-                            <h4>Buéa</h4>
-                            <p>Représentation régionale</p>
-                            <p>Rue de la Paix, Quartier Universitaire</p>
-                        </div>
-                        <div class="map-item hover-effect">
-                            <h4>Kumba</h4>
-                            <p>Représentation régionale</p>
-                            <p>Avenue de la Liberté, Centre-ville</p>
-                        </div>
-                    </div>
-
-                     <!-- Région du Nord-Ouest -->
-                     <div class="region" data-region="nord-ouest">
-                        <h3>Nord-Ouest</h3>
-                        <div class="map-item hover-effect">
-                            <h4>Bamenda</h4>
-                            <p>Représentation régionale</p>
-                            <p>Rue du Commerce, Centre-ville</p>
-                        </div>
-                    </div>
-
-
-
-
-
-
-                    
-                </div>
-            </div>
-        </div>
-    </div>
+   
 
     <!-- Footer -->
     <footer>
@@ -509,8 +236,9 @@
             </div>
             <div class="footer-section">
                 <h3>Membre de</h3>
-                <div class="iata-logo" style="background-image: url('../images/IATA.png');"></div>
-            </div>
+                <div class="iata-logo">
+                    <img src="../../images/IATA.png" alt="IATA">
+                </div>            </div>
         </div>
         <div class="footer-bottom">
             <p>&copy; 2025 MTA CAMEROUN. Tous droits réservés.</p>
